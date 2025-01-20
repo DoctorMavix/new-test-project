@@ -1,0 +1,297 @@
+{
+  "Owner": {
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "example": "678e3911c40fe5db10487bac",
+        "description": "Unique identifier for the owner"
+      },
+      "createdAt": {
+        "type": "string",
+        "example": "2024-10-19T11:24:21.214Z",
+        "description": "Timestamp when the owner was created"
+      },
+      "updatedAt": {
+        "type": "string",
+        "example": "2024-04-17T10:17:29.760Z",
+        "description": "Timestamp when the owner was last updated"
+      },
+      "firstName": {
+        "type": "string",
+        "example": "Beneficium videlicet comes velit spes voluptatibus ustulo compono pauci.",
+        "description": "FirstName of Owner"
+      },
+      "lastName": {
+        "type": "string",
+        "example": "Delicate termes tamquam articulus.",
+        "description": "LastName of Owner"
+      },
+      "email": {
+        "type": "string",
+        "example": "Darwin.Stamm41@hotmail.com",
+        "description": "Email of Owner"
+      },
+      "identity": {
+        "type": "string",
+        "example": "678e3911c40fe5db10487bad",
+        "description": "Identity of Owner"
+      },
+      "roles": {
+        "type": "string",
+        "example": ["user"],
+        "description": "Roles of Owner"
+      },
+      "isActive": {
+        "type": "string",
+        "example": true,
+        "description": "IsActive of Owner"
+      },
+      "isBlocked": {
+        "type": "string",
+        "example": true,
+        "description": "IsBlocked of Owner"
+      },
+      "password": {
+        "type": "string",
+        "example": "Verbum thalassinus derelinquo verecundia defero degero iste.",
+        "description": "Password"
+      }
+    },
+    "required": []
+  },
+  "CreateOwnerPayload": {
+    "type": "object",
+    "properties": {
+      "firstName": {
+        "type": "string",
+        "example": "Videlicet nostrum dolores tempus decimus succurro credo coniuratio.",
+        "description": "FirstName of Owner"
+      },
+      "lastName": {
+        "type": "string",
+        "example": "Attollo alo optio.",
+        "description": "LastName of Owner"
+      },
+      "email": {
+        "type": "string",
+        "example": "Johanna.Windler@hotmail.com",
+        "description": "Email of Owner"
+      },
+      "roles": {
+        "type": "string",
+        "example": ["user"],
+        "description": "Roles of Owner"
+      },
+      "password": {
+        "type": "string",
+        "example": "Defetiscor expedita ciminatio aeneus deinde abutor supellex neque deficio.",
+        "description": "Password"
+      }
+    },
+    "required": []
+  },
+  "UpdateOwnerPayload": {
+    "type": "object",
+    "properties": {
+      "firstName": {
+        "type": "string",
+        "example": "Cotidie cattus reiciendis.",
+        "description": "FirstName of Owner"
+      },
+      "lastName": {
+        "type": "string",
+        "example": "Maxime sumptus crapula conitor uterque vita totam conduco.",
+        "description": "LastName of Owner"
+      },
+      "email": {
+        "type": "string",
+        "example": "Keeley1@gmail.com",
+        "description": "Email of Owner"
+      },
+      "roles": {
+        "type": "string",
+        "example": ["user"],
+        "description": "Roles of Owner"
+      },
+      "password": {
+        "type": "string",
+        "example": "Libero umerus repudiandae ocer degusto.",
+        "description": "Password"
+      }
+    },
+    "required": []
+  },
+  "OwnerPaginationResponse": {
+    "type": "object",
+    "properties": {
+      "page": {
+        "type": "integer",
+        "example": 1,
+        "description": "Current page number"
+      },
+      "totalPages": {
+        "type": "integer",
+        "example": 10,
+        "description": "Total number of pages"
+      },
+      "totalItems": {
+        "type": "integer",
+        "example": 100,
+        "description": "Total number of items"
+      },
+      "perPage": {
+        "type": "integer",
+        "example": 10,
+        "description": "Items per page"
+      },
+      "data": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Owner"
+        },
+        "description": "Array of results for the current page"
+      }
+    }
+  },
+  "CreateOwnerResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Owner"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the create operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Owner created successfully",
+        "description": "Creation success message"
+      }
+    }
+  },
+  "UpdateOwnerResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Owner"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the update operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Owner updated successfully",
+        "description": "Update success message"
+      }
+    }
+  },
+  "DeleteOwnerResponse": {
+    "type": "object",
+    "properties": {
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the delete operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Owner deleted successfully",
+        "description": "Deletion success message"
+      }
+    }
+  },
+  "FindOwnerResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Owner"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the find operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Owner retrieved successfully",
+        "description": "Retrieval success message"
+      }
+    }
+  },
+  "OwnerErrorResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "An error occurred",
+        "description": "Error message"
+      },
+      "code": {
+        "type": "integer",
+        "example": 400,
+        "description": "HTTP status code"
+      },
+      "success": {
+        "type": "boolean",
+        "example": false,
+        "description": "Indicates if the operation was unsuccessful"
+      }
+    }
+  },
+  "GetOwnerProfileResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Owner"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the find operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Owner retrieved successfully",
+        "description": "Retrieval success message"
+      }
+    }
+  },
+  "UpdateOwnerProfileResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Owner"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the update operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Owner updated successfully",
+        "description": "Update success message"
+      }
+    }
+  },
+  "DeleteOwnerProfileResponse": {
+    "type": "object",
+    "properties": {
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the delete operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Owner deleted successfully",
+        "description": "Deletion success message"
+      }
+    }
+  }
+}

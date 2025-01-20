@@ -1,0 +1,201 @@
+{
+  "Product": {
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "example": "678e3969c40fe5db10488aa1",
+        "description": "Unique identifier for the product"
+      },
+      "createdAt": {
+        "type": "string",
+        "example": "2024-07-07T15:23:16.676Z",
+        "description": "Timestamp when the product was created"
+      },
+      "updatedAt": {
+        "type": "string",
+        "example": "2024-06-06T01:43:17.572Z",
+        "description": "Timestamp when the product was last updated"
+      },
+      "createdBy": {
+        "type": "string",
+        "example": "678e3969c40fe5db10488aa2",
+        "description": "CreatedBy of Product"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "678e3969c40fe5db10488aa3",
+        "description": "UpdatedBy of Product"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "678e3969c40fe5db10488aa4",
+        "description": "DeletedBy of Product"
+      },
+      "name": {
+        "type": "string",
+        "example": "Maia_Robel",
+        "description": "Name of Product"
+      },
+      "description": {
+        "type": "string",
+        "example": "Curso eveniet tondeo totam aqua.",
+        "description": "Description of Product"
+      }
+    },
+    "required": []
+  },
+  "CreateProductPayload": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "example": "Jonathon.Langosh-Hegmann9",
+        "description": "Name of Product"
+      },
+      "description": {
+        "type": "string",
+        "example": "Canto viriliter addo concido impedit claudeo deficio adiuvo.",
+        "description": "Description of Product"
+      }
+    },
+    "required": []
+  },
+  "UpdateProductPayload": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "example": "Dexter93",
+        "description": "Name of Product"
+      },
+      "description": {
+        "type": "string",
+        "example": "Decor deduco virgo cunctatio careo coaegresco earum ventosus.",
+        "description": "Description of Product"
+      }
+    },
+    "required": []
+  },
+  "ProductPaginationResponse": {
+    "type": "object",
+    "properties": {
+      "page": {
+        "type": "integer",
+        "example": 1,
+        "description": "Current page number"
+      },
+      "totalPages": {
+        "type": "integer",
+        "example": 10,
+        "description": "Total number of pages"
+      },
+      "totalItems": {
+        "type": "integer",
+        "example": 100,
+        "description": "Total number of items"
+      },
+      "perPage": {
+        "type": "integer",
+        "example": 10,
+        "description": "Items per page"
+      },
+      "data": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Product"
+        },
+        "description": "Array of results for the current page"
+      }
+    }
+  },
+  "CreateProductResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Product"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the create operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Product created successfully",
+        "description": "Creation success message"
+      }
+    }
+  },
+  "UpdateProductResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Product"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the update operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Product updated successfully",
+        "description": "Update success message"
+      }
+    }
+  },
+  "DeleteProductResponse": {
+    "type": "object",
+    "properties": {
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the delete operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Product deleted successfully",
+        "description": "Deletion success message"
+      }
+    }
+  },
+  "FindProductResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Product"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the find operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Product retrieved successfully",
+        "description": "Retrieval success message"
+      }
+    }
+  },
+  "ProductErrorResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "An error occurred",
+        "description": "Error message"
+      },
+      "code": {
+        "type": "integer",
+        "example": 400,
+        "description": "HTTP status code"
+      },
+      "success": {
+        "type": "boolean",
+        "example": false,
+        "description": "Indicates if the operation was unsuccessful"
+      }
+    }
+  }
+}
