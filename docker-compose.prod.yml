@@ -59,6 +59,7 @@ services:
     restart: always   
 
 volumes:
+  godplan_backend_data_volume:
   mongodb_service_data:
   mongodb_service_config:
 
