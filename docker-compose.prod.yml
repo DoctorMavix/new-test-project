@@ -42,15 +42,15 @@ services:
     networks:
       - shared_network
 
-  # godplan backend
-  godplan backend:
+  # godplan_backend
+  godplan_backend:
     build:
       context: .
       dockerfile: Dockerfile.prod
     env_file:
       - ./.env.prod
     volumes:
-      - godplan backend_data_volume:/app/volume_data
+      - godplan_backend_data_volume:/app/volume_data
       - /app/node_modules
     ports:
       - "5000:5000"

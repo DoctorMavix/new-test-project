@@ -19,4 +19,4 @@ RUN npm install -g pm2
 EXPOSE 5000
 
 # Command for production or development
-CMD ["pm2-runtime", "start", "src/bin/www.js", "--name", "godplan backend", "-i", "max"]
+CMD ["pm2-runtime", "start", "src/bin/www.js", "--name", "godplan_backend", "-i", "max"]

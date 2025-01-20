@@ -42,8 +42,8 @@ services:
     networks:
       - shared_network
 
-  # godplan backend
-  godplan backend:
+  # godplan_backend
+  godplan_backend:
     build:
       context: .
       dockerfile: Dockerfile.dev
